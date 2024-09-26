@@ -1,3 +1,4 @@
+# cs后门逆向
 #### stageless
 
 快速翻找函数表后定位到主函数sub_403040如下
@@ -165,7 +166,6 @@ for ( i = 0i64; (int)v3 > (int)i; ++i )
 `VirtualProtect(v8, v3, 0x20u, (PDWORD)flOldProtect)`：`VirtualProtect` 是 Windows API 函数，用于更改内存区域的保护属性，此代码功能为，将v6处的shellcode长度的内存空间改写为可读可执行，注：这里虽然是v8但是看了ida的汇编代码，发现反编译的时候出错了，实际上是v6
 
 `CreateThread(0i64, 0i64, StartAddress, v6, 0, 0i64)`,创建线程实例执行v6处已解密的shellcode
-
 
 之前没有启动cs服务端时，v6处的shellcode就为空，当我启动cs的服务端时，v6处填充了正常的shellcode，也正常上线了（内存中的一部分shellcode来自x64dbg）
 
