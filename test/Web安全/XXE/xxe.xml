@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<!DOCTYPE Person>[
+    <!ENTITY name "john">
+]>
+<Person>
+    <Name>&Name;</Name>
+    <Age>20</Age>
+</Person>

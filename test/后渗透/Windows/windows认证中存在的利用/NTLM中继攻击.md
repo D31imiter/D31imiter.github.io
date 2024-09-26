@@ -1,0 +1,7 @@
+客户端传输的是NTLM Hash，当拿到用户NTLM Hash时，无需明文密码，转递NTLM Hash即可完成认证，例如利用impacket中的横向移动工具：
+secretdumps 获取当前NTDS.dit内容
+psexec 类似PSEXEC的功能示例，使用remcomsvc，获得shell
+smbexec 利用smb协议获取shell
+wmiexec 通过Windows Management Instrumentation获取半交互式shell
+dcomexec.py 类似于wmiexec.py的半交互式shell，但使用不同的DCOM端点
+atexec.py 通过Task Scheduler服务在目标计算机上执行命令，并返回已执行命令的输出
